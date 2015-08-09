@@ -11,9 +11,10 @@ createSpriteTask = (filePath) ->
         spriteData = gulp.src(filePath[1] + filePath[2] + '/*.png')
             .pipe($.plumber())
             .pipe($.spritesmith({
-                imgName: filePath[2] + '.png',
-                cssName: filePath[2] + '.scss',
+                imgName: filePath[2] + '.png'
+                cssName: filePath[2] + '.scss'
                 imgPath: '../img/' + filePath[2] + '.png'
+                cssSpritesheetName: filePath[2]
             }))
         spriteData.img.pipe(gulp.dest(config.path.image))
         spriteData.css.pipe(gulp.dest(config.path.scss))
