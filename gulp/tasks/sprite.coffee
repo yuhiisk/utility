@@ -14,6 +14,8 @@ createSpriteTask = (filePath) ->
                 imgName: filePath[2] + '.png',
                 cssName: filePath[2] + '.scss',
                 imgPath: '../img/' + filePath[2] + '.png'
+                algorithm: 'binary-tree'
+                padding: 4
             }))
         spriteData.img.pipe(gulp.dest(config.path.image))
         spriteData.css.pipe(gulp.dest(config.path.scss))
